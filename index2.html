@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acertijo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      text-align: center;
+      padding-top: 60px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+    }
+    .respuesta {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #00ff99;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resuelve el acertijo</h1>
+
+  <input type="text" id="entrada" placeholder="Escribe aquí...">
+<button onclick="verificarRespuesta()">Enviar</button>
+
+<div class="respuesta" id="respuesta" style="display: none;">
+ 
+</div>
+
+<script>
+  function verificarRespuesta() {
+    const entrada = document.getElementById("entrada").value.toLowerCase().trim();
+    const respuestaCorrecta = "llave"; 
+
+    if (entrada === respuestaCorrecta) {
+      window.location.href = "https://newworldhope.github.io/video0/"; 
+    } else {
+      alert("Respuesta incorrecta. Intenta de nuevo.");
+      document.getElementById("respuesta").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
